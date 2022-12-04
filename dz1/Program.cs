@@ -6,13 +6,16 @@ if (num1Line != null && num2Line != null)
     int num1 = int.Parse(num1Line);
     int num2 = int.Parse(num2Line);
    
-    if (num2 * num2 == num1)
+    if (num1 > num2)
     {
-        Console.WriteLine("Первое число квадрат второго!");
+        Console.WriteLine("Первое число MAX!");
+        Console.WriteLine("Вротое число MIN!");
     }
     else
     {
-        Console.WriteLine("Первое число не квадрат второго!");
+        Console.WriteLine("Второе число MAX!");
+        Console.WriteLine("Первое число MIN!");
+        
     }
     
 }
