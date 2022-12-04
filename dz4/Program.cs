@@ -1,26 +1,24 @@
-﻿//Считываем данные с консоли
-string? inputLine = Console.ReadLine();
+﻿// Считываем данные с консоли 
+string? inputLine = Console.ReadLine();             
 
-//Проверяем, чтобы данные были не пустыми
-if(inputLine!=null)
+// проверяем, чтобы данные были не пустыми 
+if(inputLine!=null)                                   
 {
+   // Изменяем введенную строку в целое число
+    int inputNumber = int.Parse( inputLine);        
+    // счетчик для начала цикла
+    int seed = 2;                                  
+    string outLine = string.Empty;
 
-   //Парсим введенное число
-   int inputNumber = int.Parse(inputLine);
+   // цикл до введенного числа+1
+    while ( seed <= inputNumber-2)                   
+    {
+      // приписываем четные числа
+       outLine = outLine + seed + ',';             
+       seed = seed+2; 
+    }
+    outLine=outLine+seed;
+    //outLine = outLine.TrimEnd(',');
 
-   int startNumber = inputNumber*(-1);
-
-   //Выходное значение
-   string outLine = string.Empty;
-
-   while(startNumber<inputNumber)
-   {
-      outLine = outLine + startNumber + ", ";
-      startNumber++;
-      //startNumber=startNumber+1;
-   }
-   outLine = outLine + inputNumber;
-
-   // Выводим данные в консоль 
-   Console.WriteLine(outLine);
+    Console.WriteLine(outLine);
 }
